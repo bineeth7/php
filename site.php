@@ -10,14 +10,14 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
- <!-- Functions -->
- <!-- contianer, bunch of code designed to perform a specific task -->
-    <?php  function sayHi(){
-        echo "Hello user";
-        }
-        sayHi();
-    ?>
-
+ <!-- Functions with parameters -->
+        <?php 
+            function sayHey($name, $age){ //parameter
+                echo "Hey $name,you are $age <br>";
+            }
+            sayHey("Jinshu", "22");
+            sayHey("Bineeth", "23");
+        ?>
     </body>
     
 </html>
