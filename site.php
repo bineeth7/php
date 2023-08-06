@@ -10,13 +10,15 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
- <!-- Functions with parameters -->
+ <!-- Functions with return types -->
         <?php 
-            function sayHey($name, $age){ //parameter
-                echo "Hey $name,you are $age <br>";
-            }
-            sayHey("Jinshu", "22");
-            sayHey("Bineeth", "23");
+            function cube($num){
+                return $num * $num * $num; //return will breakout to the function,
+                                      //line after this does not get executed.
+            }                       // you can also return nothing
+            //$result = cube(2);
+           //echo $result;
+           echo cube(2);
         ?>
     </body>
     
