@@ -10,19 +10,21 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-<!-- if statements -->
+<!-- if statements (con 't) comparison >,<,>=,<=,==,!=  -->
         <?php
-            $isMale = true;
-            $isTall = true; 
-            if ($isMale && $isTall){    // &&  || operators 
-                echo "You are a tall male";
-            }elseif ($isMale && !$isTall ){   // ! negation operator
-                echo "You are a short male";
-            }elseif (!$isMale && $isTall){
-                echo "You are not male but are tall";
-            } else{
-                echo "You are not male";
-            }
+           //echo max(3, 6); //predefined function max()
+           function getMax($num1, $num2, $num3){
+                if ($num1 >= $num2 && $num1 >= $num3){
+                    //echo "$num1 is bigger";
+                    return $num1;
+                }elseif($num2 >= $num1 && $num2 >= $num3){
+                    //echo "$num2 is bigger";
+                    return $num2;
+                }else{
+                    return $num3;
+                }
+           }
+          echo getMax(4999999991,77777,669969);
         ?>
     </body>
     
