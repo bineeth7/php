@@ -9,22 +9,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
-    <body>
-<!-- if statements (con 't) comparison >,<,>=,<=,==,!=  -->
+    <body> 
+<!-- Building a better calculator -->
+        <!-- step = "0.001" take 3 decimal points of the numner (type="number") -->
+        <form action="site.php" method="post">
+          First num: <input type="number" step="0.001" name="num1"><br>
+          Op: <input type="text" name="op"><br>
+          Second num: <input type="number" step="0.001" name="num2"><br>
+            <input type="submit"> 
+        </form>
         <?php
-           //echo max(3, 6); //predefined function max()
-           function getMax($num1, $num2, $num3){
-                if ($num1 >= $num2 && $num1 >= $num3){
-                    //echo "$num1 is bigger";
-                    return $num1;
-                }elseif($num2 >= $num1 && $num2 >= $num3){
-                    //echo "$num2 is bigger";
-                    return $num2;
-                }else{
-                    return $num3;
-                }
-           }
-          echo getMax(4999999991,77777,669969);
+            $num1 = $_POST["num1"];
+            $num2 = $_POST["num2"];
+            $op = $_POST["op"];
+            if($op == "+"){
+                echo $num1 + $num2;
+            }elseif($op == "-"){
+                echo $num1 - $num2;
+            }elseif($op == "*"){
+                echo $num1 * $num2;
+            }elseif($op == "/"){
+                echo $num1 / $num2;
+            }else{
+                echo "Invalid opertor";
+            }
+             
         ?>
     </body>
     
