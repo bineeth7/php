@@ -10,14 +10,15 @@
         <link rel="stylesheet" href="">
     </head>
     <body> 
-<!-- While loop -->
-<!-- check condition first & execute loop body -->
+        <!-- for loop -->
+         <!-- for($i = 1; $i <=5; $i++){
+             echo "$i <br>";
+         } -->
         <?php
-           $index = 6;
-           do{   
-                echo "$index <br>"; // execute loop body first 7 then check the condition
-                $index++;
-           } while($index <= 5);        
+            $luckyNumbers = array(4, 8, 14, 16, 23, 42);
+            for($i = 0; $i < count($luckyNumbers); $i++){
+                echo "$luckyNumbers[$i] <br>";
+            }
         ?>
     </body>
     
