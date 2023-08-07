@@ -10,28 +10,32 @@
         <link rel="stylesheet" href="">
     </head>
     <body> 
-<!-- Building a better calculator -->
-        <!-- step = "0.001" take 3 decimal points of the numner (type="number") -->
+<!-- Swittch statements -->
         <form action="site.php" method="post">
-          First num: <input type="number" step="0.001" name="num1"><br>
-          Op: <input type="text" name="op"><br>
-          Second num: <input type="number" step="0.001" name="num2"><br>
+          What was your grade? 
+          <input type="text" name="grade"><br>
             <input type="submit"> 
         </form>
         <?php
-            $num1 = $_POST["num1"];
-            $num2 = $_POST["num2"];
-            $op = $_POST["op"];
-            if($op == "+"){
-                echo $num1 + $num2;
-            }elseif($op == "-"){
-                echo $num1 - $num2;
-            }elseif($op == "*"){
-                echo $num1 * $num2;
-            }elseif($op == "/"){
-                echo $num1 / $num2;
-            }else{
-                echo "Invalid opertor";
+            $grade = $_POST["grade"];
+            switch($grade){
+                case "A":
+                    echo "You did amazing!";
+                    break;
+                case "B":
+                    echo "You did pretty good";
+                    break;
+                case "C":
+                    echo "You did poorly";
+                    break;
+                case "D":
+                    echo "You did very bad";
+                    break;
+                case "F":
+                    echo "You fail";
+                    break;
+                default:
+                    echo "Invalid grade";
             }
              
         ?>
