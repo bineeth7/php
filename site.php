@@ -13,11 +13,11 @@
 <!-- While loop -->
 <!-- check condition first & execute loop body -->
         <?php
-           $index = 1;
-           while($index <= 5){  //loop condition
-                echo "$index <br>";      //loop body
+           $index = 6;
+           do{   
+                echo "$index <br>"; // execute loop body first 7 then check the condition
                 $index++;
-           }             
+           } while($index <= 5);        
         ?>
     </body>
     
