@@ -10,15 +10,14 @@
         <link rel="stylesheet" href="">
     </head>
     <body> 
-        <!-- for loop -->
-         <!-- for($i = 1; $i <=5; $i++){
-             echo "$i <br>";
-         } -->
         <?php
-            $luckyNumbers = array(4, 8, 14, 16, 23, 42);
-            for($i = 0; $i < count($luckyNumbers); $i++){
-                echo "$luckyNumbers[$i] <br>";
-            }
+           // comment
+           /*
+            multiple
+            lines
+            comments
+           */
+            echo "Comments are fun!";
         ?>
     </body>
     
