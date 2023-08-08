@@ -10,15 +10,7 @@
         <link rel="stylesheet" href="">
     </head>
     <body> 
-        <!-- Classes & Objects -->
-        <!-- class Classname { } -->
-        <!-- objectname = new Classname -->
-        <?php
-        $title = "My first post";
-        $author = "Bineeth";
-        $wordCount = 700;
-        include "article-header.php"
-        ?>
+        <!-- conflicts -->
 
     </body>
     
