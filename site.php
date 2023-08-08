@@ -12,10 +12,9 @@
     <body> 
         <!-- include php -->
         <?php
-        $title = "My first post";
-        $author = "Bineeth";
-        $wordCount = 700;
-        include "article-header.php"
+        include "useful-tools.php";
+        sayHi("Bineeth");
+        echo $feetInMile;
         ?>
 
     </body>
