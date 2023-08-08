@@ -10,10 +10,13 @@
         <link rel="stylesheet" href="">
     </head>
     <body> 
-        <!-- when having more page (include html files in php) -->
-        <?php include "header.html"?>
-        <p>Hello guys</p>
-        <?php include "footer.html"?>
+        <!-- include php -->
+        <?php
+        $title = "My first post";
+        $author = "Bineeth";
+        $wordCount = 700;
+        include "article-header.php"
+        ?>
 
     </body>
     
