@@ -10,15 +10,11 @@
         <link rel="stylesheet" href="">
     </head>
     <body> 
-        <?php
-           // comment
-           /*
-            multiple
-            lines
-            comments
-           */
-            echo "Comments are fun!";
-        ?>
+        <!-- when having more page (include html files in php) -->
+        <?php include "header.html"?>
+        <p>Hello guys</p>
+        <?php include "footer.html"?>
+
     </body>
     
 </html>
