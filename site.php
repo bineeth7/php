@@ -10,34 +10,40 @@
         <link rel="stylesheet" href="">
     </head>
     <body> 
-        <!-- Object Functions -->
-        <!-- we can define inside of a class and
-        different object sof that class can use it -->
-        <!-- tell us the info or modify the current object -->
+        <!-- Getters & Setters -->
+        <!-- get the attributes, set the attributes -->
+        <!-- Special functions, we can create in our php classes
+        which allow to control the acccess of people -->
+        <!-- have to, the attributes of that classes -->
         <?php
-        class Student {   
-            var $name;
-            var $major;
-            var $gpa;
-                 function __construct($name, $major, $gpa){ 
-                   $this->name = $name;
-                   $this->major = $major;
-                   $this->gpa = $gpa;
+        class Movie {   
+            public $title;
+            private $rating; // private to this class
+                 function __construct($title, $rating){ 
+                   $this->title = $title;
+                   $this->rating = $rating;
                  }
-                 function hasHonors(){
-                    if($this->gpa >= 3.5){
-                        return "true";
+                 function getRating(){
+                    return $this->rating;
+                 } 
+                 function setRating($rating){
+                    if($rating == "G" || $rating == "PG" || $rating == "PG-13" || $rating == "R" || $rating == "NR"){
+                        $this->rating = $rating;
                     }else{
-                        return "false";
+                        $this->rating = "NR";
                     }
-                 }
-            }
-            $student1 = new Student("Bineeth", "Science", 3);
-            $student2 = new Student("Jinshu", "Computer", 3.5);
-            echo $student1->hasHonors();
-            echo $student2->hasHonors();
-
-                    ?>
+                 }       
+                    }
+            $avengers = new Movie("Avengers", "PG-13");
+            //G, PG, PG-13, R, NR
+            $avengers->setRating("Dog");
+            echo $avengers->getRating();
+        ?>
     </body>
     
 </html>
+<!-- visibility modifier a keryword gonna tell php what code 
+is able to access and use different attributes in our program 
+public - visible to any other code in the prgrm (opem to everybody)
+var and public are interchangable in most of the situation
+public: public to the class, cannot access from outside the class-->
