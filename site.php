@@ -21,7 +21,7 @@
             private $rating; // private to this class
                  function __construct($title, $rating){ 
                    $this->title = $title;
-                   $this->rating = $rating;
+                   $this->setRating($rating);
                  }
                  function getRating(){
                     return $this->rating;
@@ -36,7 +36,6 @@
                     }
             $avengers = new Movie("Avengers", "PG-13");
             //G, PG, PG-13, R, NR
-            $avengers->setRating("Dog");
             echo $avengers->getRating();
         ?>
     </body>
