@@ -35,7 +35,7 @@
             $student1 = new Student("Bineeth", "Science", 3);
             $student2 = new Student("Jinshu", "Computer", 3.5);
             echo $student1->hasHonors();
-/echo $student2->hasHonors();
+            echo $student2->hasHonors();
 
                     ?>
     </body>
