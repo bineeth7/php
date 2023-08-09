@@ -10,30 +10,34 @@
         <link rel="stylesheet" href="">
     </head>
     <body> 
-        <!-- constructors -->
-        <!-- basically a fuction get call
-        whenever we create an object
-        of the class -->
-        <!-- function __construct(){
-                    
-                } -->
+        <!-- Object Functions -->
+        <!-- we can define inside of a class and
+        different object sof that class can use it -->
+        <!-- tell us the info or modify the current object -->
         <?php
-        class Book {   //class: blueprint of objects 
-                 var $title;
-                 var $author;
-                 var $pages;
-
-                 function __construct($aTitle, $aAuthor, $aPages){  //constructor
-                    $this->title = $aTitle; //keyword for the current object getting created
-                    $this->author = $aAuthor;
-                    $this->pages = $aPages;
+        class Student {   
+            var $name;
+            var $major;
+            var $gpa;
+                 function __construct($name, $major, $gpa){ 
+                   $this->name = $name;
+                   $this->major = $major;
+                   $this->gpa = $gpa;
+                 }
+                 function hasHonors(){
+                    if($this->gpa >= 3.5){
+                        return "true";
+                    }else{
+                        return "false";
+                    }
                  }
             }
-            $book1 = new Book("Harry Potter","JK Rowling",400);  //object: instance of a class
-            $book1->title = "Hunger Games"; // can be updates also
-            $book2 = new Book("Lord of the Rings","Tolkien",700);  //object: instance of a class 
-        echo $book1->title;
-        ?>
+            $student1 = new Student("Bineeth", "Science", 3);
+            $student2 = new Student("Jinshu", "Computer", 3.5);
+            echo $student1->hasHonors();
+/echo $student2->hasHonors();
+
+                    ?>
     </body>
     
 </html>
