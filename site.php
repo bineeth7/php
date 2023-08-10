@@ -10,39 +10,33 @@
         <link rel="stylesheet" href="">
     </head>
     <body> 
-        <!-- Getters & Setters -->
-        <!-- get the attributes, set the attributes -->
-        <!-- Special functions, we can create in our php classes
-        which allow to control the acccess of people -->
-        <!-- have to, the attributes of that classes -->
+        <!-- Inheritance -->
+        <!-- A class can inherit all of the attributes 7 functionality
+        from another class -->
         <?php
-        class Movie {   
-            public $title;
-            private $rating; // private to this class
-                 function __construct($title, $rating){ 
-                   $this->title = $title;
-                   $this->setRating($rating);
-                 }
-                 function getRating(){
-                    return $this->rating;
-                 } 
-                 function setRating($rating){
-                    if($rating == "G" || $rating == "PG" || $rating == "PG-13" || $rating == "R" || $rating == "NR"){
-                        $this->rating = $rating;
-                    }else{
-                        $this->rating = "NR";
-                    }
-                 }       
-                    }
-            $avengers = new Movie("Avengers", "PG-13");
-            //G, PG, PG-13, R, NR
-            echo $avengers->getRating();
+            class Chef {
+                function makeChicken(){
+                    echo "The chef makes chicken <br>";
+                }
+                function makeSalad(){
+                    echo "The chef makes salad <br>";
+                }
+                function makeSpecialDish(){
+                    echo "The chef makes bbq ribs <br>";
+                }
+            }
+            class italianChef extends Chef{
+                function makePasta(){
+                    echo "the chef makes pasta";
+                }
+
+            }
+            $chef = new Chef();
+            $chef->makeChicken();
+            $italianChef = new ItalianChef();
+            $italianChef->makeChicken();
+            $italianChef->makePasta();
         ?>
     </body>
     
 </html>
-<!-- visibility modifier a keryword gonna tell php what code 
-is able to access and use different attributes in our program 
-public - visible to any other code in the prgrm (opem to everybody)
-var and public are interchangable in most of the situation
-public: public to the class, cannot access from outside the class-->
