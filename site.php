@@ -29,13 +29,15 @@
                 function makePasta(){
                     echo "the chef makes pasta";
                 }
+                function makeSpecialDish(){ //overriding the makeSpecialDish function in Chef class
+                    echo "The chef makes chicken parm";
+                }
 
             }
             $chef = new Chef();
-            $chef->makeChicken();
+            $chef->makeSpecialDish();
             $italianChef = new ItalianChef();
-            $italianChef->makeChicken();
-            $italianChef->makePasta();
+            $italianChef->makeSpecialDish();
         ?>
     </body>
     
